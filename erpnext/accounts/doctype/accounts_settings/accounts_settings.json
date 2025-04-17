@@ -75,7 +75,10 @@
   "general_ledger_remarks_length",
   "ignore_is_opening_check_for_reporting",
   "column_break_lvjk",
-  "receivable_payable_remarks_length"
+  "receivable_payable_remarks_length",
+  "performance_section",
+  "batch_size_ar_ap",
+  "section_break_yxeq",
  ],
  "fields": [
   {
@@ -454,7 +457,7 @@
    "description": "Truncates 'Remarks' column to set character length",
    "fieldname": "receivable_payable_remarks_length",
    "fieldtype": "Int",
-   "label": "Accounts Receivable/Payable"
+   "label": "Accounts Receivable / Payable"
   },
   {
    "fieldname": "column_break_lvjk",
@@ -466,27 +469,35 @@
    "label": "Remarks Column Length"
   },
   {
-   "default": "Payment",
-   "description": "Only applies for Normal Payments",
-   "fieldname": "exchange_gain_loss_posting_date",
-   "fieldtype": "Select",
-   "label": "Posting Date Inheritance for Exchange Gain / Loss",
-   "options": "Invoice\nPayment\nReconciliation Date"
-  },
-  {
    "default": "0",
    "description": "Ignores legacy Is Opening field in GL Entry that allows adding opening balance post the system is in use while generating reports",
    "fieldname": "ignore_is_opening_check_for_reporting",
    "fieldtype": "Check",
    "label": "Ignore Is Opening check for reporting"
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Performance"
+  },
+  {
+   "default": "0",
+   "fieldname": "batch_size_ar_ap",
+   "fieldtype": "Int",
+   "label": "Batch Size For Accounts Receivable / Payable"
+  },
+  {
+   "fieldname": "section_break_yxeq",
+   "fieldtype": "Section Break"
   }
  ],
+ "grid_page_length": 50,
  "icon": "icon-cog",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-01-23 13:15:44.077853",
+ "modified": "2025-04-17 16:08:54.580364",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Accounts Settings",
