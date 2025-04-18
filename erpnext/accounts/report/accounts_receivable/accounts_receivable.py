@@ -49,6 +49,7 @@ class ReceivablePayableReport:
 		self.age_as_on = (
 			getdate(nowdate()) if self.filters.report_date > getdate(nowdate()) else self.filters.report_date
 		)
+		self.batch_size = frappe.db.get_single_value("Accounts Settings", "batch_size_ar_ap")
 
 	def run(self, args):
 		self.filters.update(args)
@@ -820,7 +821,8 @@ class ReceivablePayableReport:
 			query = query.where(ple.name.gt(self.last_key))
 
 		query = query.orderby(self.ple.name)
-		query = query.limit(5)
+		if self.batch_size:
+			query = query.limit(self.batch_size)
 
 		self.ple_entries = query.run(as_dict=True)
 
