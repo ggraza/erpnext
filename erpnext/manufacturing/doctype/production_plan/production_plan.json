@@ -313,7 +313,7 @@
   {
    "fieldname": "for_warehouse",
    "fieldtype": "Link",
-   "label": "Raw Materials Warehouse",
+   "label": "Raw Materials for Warehouse",
    "options": "Warehouse"
   },
   {

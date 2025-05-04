@@ -10,7 +10,7 @@
  "icon": "integration",
  "idx": 0,
  "is_hidden": 0,
- "label": "ERPNext Integrations",
+ "label": "ERP Integrations",
  "links": [
   {
    "hidden": 0,
@@ -255,7 +255,7 @@
  "modified": "2023-05-24 14:47:25.984717",
  "modified_by": "Administrator",
  "module": "ERPNext Integrations",
- "name": "ERPNext Integrations",
+ "name": "ERP Integrations",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
@@ -265,5 +265,5 @@
  "roles": [],
  "sequence_id": 21.0,
  "shortcuts": [],
- "title": "ERPNext Integrations"
+ "title": "ERP Integrations"
 }
